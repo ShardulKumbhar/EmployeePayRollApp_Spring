@@ -24,3 +24,6 @@
 10-05-2022 12:30[INFO][restartedMain] [o.s.b.w.e.t.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path ''
 10-05-2022 12:30[INFO][restartedMain] [c.e.E.EmployeePayrollApplication:61] Started EmployeePayrollApplication in 8.8 seconds (JVM running for 9.89)
 10-05-2022 12:30[INFO][restartedMain] [c.e.E.EmployeePayrollApplication:14] The application has started! 
+10-05-2022 12:48[INFO][SpringApplicationShutdownHook] [o.s.o.j.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+10-05-2022 12:48[INFO][SpringApplicationShutdownHook] [c.z.h.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+10-05-2022 12:48[INFO][SpringApplicationShutdownHook] [c.z.h.HikariDataSource:352] HikariPool-1 - Shutdown completed.

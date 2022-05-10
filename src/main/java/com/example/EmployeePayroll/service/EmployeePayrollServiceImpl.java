@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class EmployeePayrollServiceImpl implements IEmployeePayrollService {
     }
 
     @Override
-    public EmployeePayrollData updateEmployeePayrollData(int empId, EmployeePayrollDTO employeePayrollDTO) {
+    public EmployeePayrollData updateEmployeePayrollData(int empId, @Valid EmployeePayrollDTO employeePayrollDTO) {
         log.info("Updating the employee data");
         EmployeePayrollData employeePayrollData = this.getEmployeePayrollDataById(empId);
         employeePayrollData.setName(employeePayrollDTO.name);
