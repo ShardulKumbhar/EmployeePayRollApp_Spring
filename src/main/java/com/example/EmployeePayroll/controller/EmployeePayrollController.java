@@ -2,6 +2,7 @@ package com.example.EmployeePayroll.controller;
 
 import com.example.EmployeePayroll.dto.EmployeePayrollDTO;
 import com.example.EmployeePayroll.dto.ResponseDTO;
+import com.example.EmployeePayroll.exception.EmployeeNotFound;
 import com.example.EmployeePayroll.model.EmployeePayrollData;
 import com.example.EmployeePayroll.service.IEmployeePayrollService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class EmployeePayrollController {
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
 
-    @RequestMapping(value = {"/get"})
+    @RequestMapping(value = {"/list"})
     public ResponseEntity<ResponseDTO> getEmployeePayrollData() {
         List<EmployeePayrollData> employeePayrollDataList = null;
         employeePayrollDataList = employeePayrollService.getEmployeePayrollData();
@@ -37,7 +38,7 @@ public class EmployeePayrollController {
     }
 
     @GetMapping("/get/{empId}")
-    public ResponseEntity<ResponseDTO> getEmployeePayrolIData(@PathVariable(value = "empId") int empId) {
+    public ResponseEntity<ResponseDTO> getEmployeePayrolIData(@PathVariable(value = "empId") int empId) throws EmployeeNotFound {
         EmployeePayrollData employeePayrollData = null;
         employeePayrollData=employeePayrollService.getEmployeePayrollDataById(empId);
         ResponseDTO respDTO = new ResponseDTO("Get Call Success for id successful ", employeePayrollData);
@@ -45,7 +46,7 @@ public class EmployeePayrollController {
     }
 
     @PutMapping("/update/{empId}")
-    public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@PathVariable int empId,@Valid @RequestBody EmployeePayrollDTO empPayrollDTO) {
+    public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@PathVariable int empId,@Valid @RequestBody EmployeePayrollDTO empPayrollDTO) throws EmployeeNotFound {
         EmployeePayrollData employeePayrollData = null;
         employeePayrollData = employeePayrollService.updateEmployeePayrollData(empId,empPayrollDTO);
         ResponseDTO responseDTO = new ResponseDTO("Updated employee Payroll data successfully", employeePayrollData);
