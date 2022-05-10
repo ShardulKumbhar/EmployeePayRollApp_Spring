@@ -5,10 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -25,16 +22,21 @@ public @ToString class EmployeePayrollDTO {
     @Min(value = 5000, message = "ERROR: Please enter a salary greater than 5000")
     public long salary;
 
+    @Pattern(regexp = "male|female",message = "Gender needs to be male or female")
     public String gender;
 
     @JsonFormat(pattern = "dd MM yyyy")
+    @NotNull(message = "start should not be empty")
+    @PastOrPresent(message = "start date should be past or todays")
     public LocalDate startDate;
 
+    @NotBlank(message = "note should not be empty")
     public String note;
 
+    @NotBlank(message = "profile pic should not be empty")
     public String profilePic;
 
+    @NotNull(message = "department should not be empty")
     public List<String> departments;
-
 
 }
