@@ -2,7 +2,6 @@ package com.example.EmployeePayroll.service;
 
 import com.example.EmployeePayroll.dto.EmployeePayrollDTO;
 import com.example.EmployeePayroll.model.EmployeePayrollData;
-import com.example.EmployeePayroll.repository.IEmployeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,9 +15,6 @@ import java.util.List;
 public class EmployeePayrollServiceImpl implements IEmployeePayrollService {
 
     private List<EmployeePayrollData> employeePayrollDataList = new ArrayList<>();
-
-    @Autowired
-    private IEmployeeRepository employeeRepository;
 
     @Override
     public EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {

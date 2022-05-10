@@ -18,7 +18,7 @@ public class EmployeePayrollDTO {
     public String name;
 
     @NotNull(message = "ERROR: Salary cannot be null!")
-    @Min(value = 5000, message = "ERROR: Please enter a value greater than 5000")
+    @Min(value = 5000, message = "ERROR: Please enter a salary greater than 5000")
     public long salary;
 
 }
