@@ -1,0 +1,26 @@
+10-05-2022 12:30[INFO][restartedMain] [c.e.E.EmployeePayrollApplication:55] Starting EmployeePayrollApplication using Java 11.0.14.1 on SHARDUL with PID 3416 (C:\Users\shard\IdeaProjects\0FinalBook\EmployeePayRoll\target\classes started by shard in C:\Users\shard\IdeaProjects\0FinalBook\EmployeePayRoll)
+10-05-2022 12:30[INFO][restartedMain] [c.e.E.EmployeePayrollApplication:640] No active profile set, falling back to 1 default profile: "default"
+10-05-2022 12:30[INFO][restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+10-05-2022 12:30[INFO][restartedMain] [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+10-05-2022 12:30[INFO][restartedMain] [o.s.d.r.c.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+10-05-2022 12:30[INFO][restartedMain] [o.s.d.r.c.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 89 ms. Found 1 JPA repository interfaces.
+10-05-2022 12:30[INFO][restartedMain] [o.s.b.w.e.t.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http)
+10-05-2022 12:30[INFO][restartedMain] [o.a.c.c.StandardService:173] Starting service [Tomcat]
+10-05-2022 12:30[INFO][restartedMain] [o.a.c.c.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.62]
+10-05-2022 12:30[INFO][restartedMain] [o.a.c.c.C.[.[.[/]:173] Initializing Spring embedded WebApplicationContext
+10-05-2022 12:30[INFO][restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 3686 ms
+10-05-2022 12:30[INFO][restartedMain] [o.h.j.i.u.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+10-05-2022 12:30[INFO][restartedMain] [o.h.Version:44] HHH000412: Hibernate ORM core version 5.6.8.Final
+10-05-2022 12:30[INFO][restartedMain] [o.h.a.c.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+10-05-2022 12:30[INFO][restartedMain] [c.z.h.HikariDataSource:110] HikariPool-1 - Starting...
+10-05-2022 12:30[WARN][restartedMain] [c.z.h.u.DriverDataSource:70] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+10-05-2022 12:30[INFO][restartedMain] [c.z.h.HikariDataSource:123] HikariPool-1 - Start completed.
+10-05-2022 12:30[INFO][restartedMain] [o.h.d.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+10-05-2022 12:30[INFO][restartedMain] [o.h.t.PojoInstantiator:47] HHH000182: No default (no-argument) constructor for class: com.example.EmployeePayroll.model.EmployeePayrollData (class must be instantiated by Interceptor)
+10-05-2022 12:30[INFO][restartedMain] [o.h.e.t.j.p.i.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+10-05-2022 12:30[INFO][restartedMain] [o.s.o.j.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+10-05-2022 12:30[WARN][restartedMain] [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+10-05-2022 12:30[INFO][restartedMain] [o.s.b.d.a.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+10-05-2022 12:30[INFO][restartedMain] [o.s.b.w.e.t.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path ''
+10-05-2022 12:30[INFO][restartedMain] [c.e.E.EmployeePayrollApplication:61] Started EmployeePayrollApplication in 8.8 seconds (JVM running for 9.89)
+10-05-2022 12:30[INFO][restartedMain] [c.e.E.EmployeePayrollApplication:14] The application has started! 
