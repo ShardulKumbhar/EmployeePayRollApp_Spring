@@ -15,11 +15,19 @@ import java.util.List;
 
 public @ToString class EmployeePayrollDTO {
 
+    /**
+     * Created a regex patter to Validate name
+     * else throw Exception
+     */
     @NotNull(message = "ERROR: Name cannot be null!")
     @NotEmpty(message = "ERROR: Name cannot be empty!")
     @Pattern(regexp = "^([A-Z][a-zA-Z]{2,}[ ]?)+$", message = "ERROR: Please enter a valid name!")
     public String name;
 
+    /**
+     * Created a regex patter to salary value 5000
+     * else throw exception
+     */
     @NotNull(message = "ERROR: Salary cannot be null!")
     @Min(value = 5000, message = "ERROR: Please enter a salary greater than 5000")
     public long salary;
@@ -39,6 +47,6 @@ public @ToString class EmployeePayrollDTO {
     public String profilePic;
 
     @NotNull(message = "department should not be empty")
-    public List<String> departments;
+    public List<String> department;
 
 }

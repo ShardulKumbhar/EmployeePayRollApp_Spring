@@ -8,6 +8,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ResponseDTO {
+
+    /**
+     * To response with Message and data
+     */
     private String message;
     private Object data;
 }

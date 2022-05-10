@@ -21,11 +21,21 @@ public class EmployeePayrollServiceImpl implements IEmployeePayrollService {
     private EmployeePayrollRepository employeePayrollRepository ;
 
 
+    /**
+     * Method to Watch all data Stored
+     * @return
+     */
     @Override
     public List<EmployeePayrollData> getEmployeePayrollData() {
         return employeePayrollRepository.findAll();
     }
 
+    /**
+     * Method to get employee by id
+     * @param empId
+     * @return
+     * @throws EmployeeNotFound
+     */
     @Override
     public EmployeePayrollData getEmployeePayrollDataById(int empId) throws EmployeeNotFound {
         return employeePayrollRepository
@@ -33,6 +43,11 @@ public class EmployeePayrollServiceImpl implements IEmployeePayrollService {
                 .orElseThrow(()->new EmployeeNotFound(("Employee with employeeOd "+empId+ "does not exists...")));
     }
 
+    /**
+     * Method to Store Employee data in DB
+     * @param employeePayrollDTO
+     * @return
+     */
     @Override
     public EmployeePayrollData createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO)  {
         EmployeePayrollData empData = null;
@@ -41,6 +56,9 @@ public class EmployeePayrollServiceImpl implements IEmployeePayrollService {
        return employeePayrollRepository.save(empData);
     }
 
+    /**
+     * Method to Update Data in DB
+     */
     @Override
     public EmployeePayrollData updateEmployeePayrollData(int empId, EmployeePayrollDTO employeePayrollDTO) throws EmployeeNotFound {
         EmployeePayrollData empData = this.getEmployeePayrollDataById(empId);
@@ -48,10 +66,22 @@ public class EmployeePayrollServiceImpl implements IEmployeePayrollService {
         return employeePayrollRepository.save(empData);
     }
 
+    /**
+     * Method to delete Data from DB
+     */
     @Override
     public void deleteEmployeePayrollData(int empId) throws EmployeeNotFound {
         EmployeePayrollData empData = this.getEmployeePayrollDataById(empId);
         employeePayrollRepository.delete(empData);
 
     }
+
+    /**
+     * Method to get by department name
+     */
+    @Override
+    public List<EmployeePayrollData> getEmployeesByDepartment(String department) {
+        return employeePayrollRepository.findEmployeesByDepartment(department);
+    }
+
 }

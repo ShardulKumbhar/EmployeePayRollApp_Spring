@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "employee_payroll_data")
 public class EmployeePayrollData {
 
     @Id
@@ -28,13 +29,17 @@ public class EmployeePayrollData {
     private String profilePic;
     @ElementCollection
     @CollectionTable(name = "employee_department", joinColumns = @JoinColumn(name = "id"))
-    private List<String> departments;
+    private List<String> department;
 
     public EmployeePayrollData(EmployeePayrollDTO employeePayrollDTO){
 
         this.updateEmployeePayrollData(employeePayrollDTO);
     }
 
+    /**
+     * Assigning to Entity data
+     * @param employeePayrollDTO
+     */
     public void updateEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
         this.name = employeePayrollDTO.name;
         this.salary = employeePayrollDTO.salary;
@@ -42,7 +47,7 @@ public class EmployeePayrollData {
         this.startDate = employeePayrollDTO.startDate;
         this.note = employeePayrollDTO.note;
         this.profilePic = employeePayrollDTO.profilePic;
-        this.departments = employeePayrollDTO.departments;
+        this.department = employeePayrollDTO.department;
     }
 
 }
