@@ -3,6 +3,7 @@ package com.example.EmployeePayroll.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.validation.constraints.*;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
+
 public @ToString class EmployeePayrollDTO {
 
     @NotNull(message = "ERROR: Name cannot be null!")

@@ -18,5 +18,5 @@ public interface IEmployeePayrollService {
 
     EmployeePayrollData updateEmployeePayrollData(int empId,EmployeePayrollDTO employeePayrollDTO) throws EmployeeNotFound;
 
-    void deleteEmployeePayrollData(int empId);
+    void deleteEmployeePayrollData(int empId) throws EmployeeNotFound;
 }
